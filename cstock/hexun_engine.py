@@ -81,6 +81,7 @@ class HexunEngine(Engine):
 
         return Stock(
             code=code,
+            percent="{percent:.2%}".format(percent=stock.get('percent', None)),
             name=stock.get('name', None),
             price=stock.get('price', None),
             time=time,

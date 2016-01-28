@@ -22,6 +22,7 @@ class Stock(object):
     __slots__ = [
         'name',
         'code',
+        'percent',
         'date',
         'time',
         'price',
