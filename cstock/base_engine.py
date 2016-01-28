@@ -75,6 +75,9 @@ class Engine(object):
         :rtype:
             ``str``
         """
+        if len(stock_id)==7 or stock_id.lower().startswith('sh') or stock_id.lower().startswith('sz'):
+            return self.raw_transform(stock_id)
+
         if stock_id.startswith('0') or stock_id.startswith('3'):
             return self.shenzhen_transform(stock_id)
         

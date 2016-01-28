@@ -24,6 +24,7 @@ class HexunEngine(Engine):
 
         super(HexunEngine, self).__init__(base_url)
 
+        self.raw_transform = lambda sid: "%s" % sid
         self.shanghai_transform = lambda sid: "0%s" % sid
         self.shenzhen_transform = lambda sid: "1%s" % sid
  
